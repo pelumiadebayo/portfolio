@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pelumi Adebayo| Portfolio</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">  
+    <link rel="stylesheet" href="css/animate/animate.min.css">
+    <link  rel="stylesheet" href="css/asset/contact.css"/>
+
+</head>
+<body class="contain">
+    <header class="animated slideInLeft">
+        <h3>Contact Me</h3>
+    </header>
+    <main>
+        <nav>
+            <a href="index.html"><i class="far fa-address-card"></i></a>
+            <a href="portfolio.html"><i class="far fa-folder-open"></i></a>
+            <a href="contact.html" class="active"><i class="far fa-envelope"></i></a>
+            <a href="blog.html"><i class="fab fa-creative-commons-share"></i></a>
+        </nav>
+        <section>
+            <div id="sectionHead">
+            </div>
+            <article >
+                <h2 class="name">_Let't Build Something Awesome together</h2>
+                <form class="animated slideInUp"->
+                    <p>Schedule a talk|call with me via skype or 
+                        send me a message with the form below.</p>
+                    <div class="list-group">
+                        <div class="list-group-item form-group">
+                            <input type="text" placeholder="Name" class="form-control no-border"/>
+                        </div>
+                        <div class="list-group-item form-group">
+                            <input type="email" placeholder="Email" class="form-control no-border"/>
+                        </div>
+                        <div class="list-group-item form-group">
+                            <textarea type="text" placeholder="message" class="form-control no-border"></textarea>
+                        </div>
+                        <button class="btn-primary button">send</button>
+                    </div>
+                </form>
+            </article>
+        </section>
+        <div class="social">
+            <a><i class="socialIcon fab fa-twitter fa-sm animated rotateInDownRight"></i></a>
+            <a><i class="socialIcon fab fa-linkedin-in fa-sm animated rotateInDownRight"></i></a>
+            <a><i class="fb fab fa-facebook-f fa-sm animated rotateInDownRight"></i></a>
+        </div>
+    </main>
+    <footer> 
+        <small>&copy;2019. Pelumi Adebayo. Nigerian Based Web App Specialist</small>
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+    <script src="js/textillate/jquery.lettering.min.js"></script>
+    <script src="js/textillate/jquery.textillate.js"></script>
+    <script src="js/textillate/jquery.fittext.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $(function () {
+            $('.tltle').textillate({ in: { effect: 'rollIn' } });
+            $('.name').textillate({ in: { effect: 'zoomIn' } });
+
+        })
+        for(let i = 1; i <= 2500; i++){
+            $('.contain').append('<div class="box"></div>')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+html{
+    /* height: auto; */
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(24, 24, 24) 500px),
+     linear-gradient(to left, rgba(0, 0, 0, 0.1) 80%, rgb(24, 24, 24) 100%),
+     url(images/portfolio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: bottom;
+    color: #efefef;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    line-height: 1.7;
+    font-family: Gotham SSm A,Gotham SSm B,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+}
+
+header{
+    position: fixed;
+    top: 0.5em;
+    left: 0.5em;
+    z-index: 1;
+}
+
+main {
+    display: flex;
+    margin: 1px;
+}
+
+nav{
+    min-width: 50px;
+    border-right: 2px #e45cb6 solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5em 0.2em;
+    position: fixed;
+    top: 5em;
+    height: 100%;
+}
+
+section{
+    display: flex;
+    padding: 2em 0.5em 1.5em 2.5em;
+    margin: 3em auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.cardBlock{
+    display: flex;
+}
+
+.myCards{
+    max-width: 400px;
+    margin-bottom: 1em;
+    margin-left: 5px;
+}
+.upper{
+    max-width: 800px;
+}
+.myImage{
+    min-width: 50%;
+    max-width: 300px;
+    height: 200px;
+    border: 2px #e45cb6 solid;
+}
+
+h2{
+    color: #e45cb6;
+}
+nav a{
+    margin-top: 1em;
+    padding: 0.3em;
+}
+a:hover{
+    color: #e45cb6;
+}
+.active{
+    color: #e45cb6;
+}
+
+.social{
+    position: fixed;
+    bottom: 1.5em;
+    right: 6%;
+    z-index: 1;
+}
+.socialIcon{
+    padding: 0.3em;
+    margin: 0.3em;
+    border-radius: 50%;
+    background-color: #e45cb6;
+}
+.fb{
+    padding: 0.3em 0.5em;
+    margin: 0.3em;
+    border-radius: 50%;
+    background-color: #e45cb6;
+    /* color: #007bff; */
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .button{
+    margin: 2em;
+}
+small{
+    font-size: 0.6em;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+p{
+    text-align: justify; 
+    text-justify: inter-word;
+}
+@media (max-width: 768px){
+    
+    body{
+        font-size: 16px;
+    }
+    nav{
+        min-width: 30px;
+    }
+    .upper{
+        margin: 0;
+     }
+}
+@media (max-height: 300px){
+    nav{
+        top: 1.5em;
+    }
+}
