@@ -1,17 +1,23 @@
+:root { 
+    --primary-color:#f6f794 ; 
+    --secondary-color: #FAEBEFFF; 
+} 
 html{
     /* height: auto; */
     padding: 0px;
     margin: 0px;
 }
+* { box-sizing: border-box; }
 
 body{
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(24, 24, 24) 500px),
      linear-gradient(to left, rgba(0, 0, 0, 0.1) 80%, rgb(24, 24, 24) 100%), 
-     url(//pluralsight2.imgix.net/custom-home/google-africa-aad-2019-hero-image-27ca254c0cc8ded6c3342d2b0a8d7644);
+     url(http://pluralsight2.imgix.net/custom-home/google-africa-aad-2019-hero-image-27ca254c0cc8ded6c3342d2b0a8d7644);
+     /* http://pluralsight2.imgix.net/custom-home/google-africa-aad-2019-hero-image-27ca254c0cc8ded6c3342d2b0a8d7644 */
     background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: bottom;
-    color: #efefef;
+    background-attachment: fixed; 
+    background-position: center;
+    color: var(--secondary-color);
     font-size: 20px;
     margin: 0;
     padding: 0;
@@ -20,7 +26,7 @@ body{
     font-family: Gotham SSm A,Gotham SSm B,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
 }
 
-header{
+ header{
     position: fixed;
     top: 0.5em;
     left: 0.5em;
@@ -30,11 +36,11 @@ header{
 main {
     display: flex;
     margin: 1px;
-}
+} 
 
 nav{
     min-width: 50px;
-    border-right: 2px #e45cb6 solid;
+    border-right: 2px var(--primary-color) solid;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,17 +64,17 @@ p{
     text-justify: inter-word;
 }
 h2{
-    color: #e45cb6;
+    color: var(--primary-color);
 }
 nav a{
     margin-top: 1em;
     padding: 0.3em;
 }
 a:hover{
-    color: #e45cb6;
+    color: var(--primary-color);
 }
 .active{
-    color: #e45cb6;
+    color: var(--primary-color);
 }
 #wrapTitle{
     margin-right: 1px;
@@ -84,7 +90,7 @@ a:hover{
     min-width: 200px;
     max-width: 300px;
     height: 150px;
-    border: 2px #e45cb6 solid;
+    border: 2px var(--primary-color) solid;
 }
 
 article{
@@ -101,14 +107,14 @@ article{
     padding: 0.3em;
     margin: 0.3em;
     border-radius: 50%;
-    background-color: #e45cb6;
+    background-color: var(--primary-color);
     /* color: #007bff; */
 }
 .fb{
     padding: 0.3em 0.5em;
     margin: 0.3em;
     border-radius: 50%;
-    background-color: #e45cb6;
+    background-color:var(--primary-color);
     /* color: #007bff; */
 }
 footer {
@@ -137,9 +143,184 @@ small{
         min-width: 30px;
         
     }
+    .cardBlock{
+        display: block;
+    }
+
+}
+.carousel{
+    width: 62%;
+}
+.carousel-cell {
+    width: 66%;
+    height: 200px;
+    margin-right: 10px;
+    background: var(--secondary-color);
+    border-radius: 5px;
+    counter-increment: gallery-cell;
+  }
+  
+  /* cell number */
+  .carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+  .button{
+    margin: 1em;
+    border-radius: 10px;
+    background-color: var(--primary-color);
 }
 @media (max-height: 300px){
     nav{
         top: 1.5em;
     }
+}
+
+.cardBlock{
+    display: flex;
+}
+
+.myCards{
+    max-width: 400px;
+    margin-bottom: 1em;
+    margin-left: 5px;
+}
+.upper{
+    max-width: 800px;
+}
+.myImage{
+    min-width: 50%;
+    max-width: 300px;
+    height: 200px;
+    border: 2px #2D2926FF solid;
+}
+
+a {
+     color:var(--secondary-color); 
+    text-decoration: none;
+    background-color: transparent;
+}
+
+  
+
+/* form */
+#wrapTitle{
+    margin-right: 1px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.contain .box{
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background: #111;
+    float: left;
+    border: 1px solid rgba(0, 0, 0, .2);
+    box-sizing: border-box;
+    overflow:hidden;
+}
+.contain .box:before{
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background: #1d1d1d;
+    box-shadow: 0 1px 4px #000;
+    transition: 2s ease-in-out;
+}
+.contain .box:hover:before{
+    transition: 0s ease-in-out;
+
+}
+.contain .box:nth-child(9n+1):hover:before{
+background: #f00;
+box-shadow: 0 0 3px #f00,
+            0 0 10px #f00;
+}
+.contain .box:nth-child(9n+2):hover:before{
+    background: #0f0;
+    box-shadow: 0 0 3px #0f0,
+                0 0 10px #0f0;
+}
+.contain .box:nth-child(9n+3):hover:before{
+    background: #00f;
+    box-shadow: 0 0 3px #00f,
+                0 0 10px #00f;
+}
+.contain .box:nth-child(9n+4):hover:before{
+    background: #ff0;
+    box-shadow: 0 0 3px #ff0,
+                0 0 10px #ff0;
+}
+.contain .box:nth-child(9n+5):hover:before{
+    background: #f0f;
+    box-shadow: 0 0 3px #f0f,
+                0 0 10px #f0f;
+}
+.contain .box:nth-child(9n+6):hover:before{
+    background: #0fffad;
+    box-shadow: 0 0 3px #0fffad,
+                0 0 10px #0fffad;
+}
+.contain .box:nth-child(9n+7):hover:before{
+    background: #e45cb6;
+    box-shadow: 0 0 3px #e45cb6,
+                0 0 10px #e45cb6;
+}
+.contain .box:nth-child(9n+8):hover:before{
+    background: #e45cb6;
+    box-shadow: 0 0 3px #e45cb6,
+                0 0 10px #e45cb6;
+}
+.contain .box:nth-child(9n+9):hover:before{
+    background: #f45103;
+    box-shadow: 0 0 3px #f45103,
+                0 0 10px #f45103;
+}
+
+/* contactform */
+
+
+.form-control:focus {
+    border-left: 3px var(--primary-color) solid;
+    border-right: 3px var(--primary-color) solid;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(152, 203, 232, .6);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.no-border, .no-borders {
+    border-width: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: rgba(255, 255, 255, 0.2);;
+}
+
+.form-control {
+    width: 100%;
+    height: 36px;
+    padding: 6px 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid var(--primary-color);
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }

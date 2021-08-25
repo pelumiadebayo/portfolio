@@ -1,3 +1,8 @@
+:root { 
+    --primary-color: #5dfef1 ; 
+    --secondary-color: rgb(255, 255, 255); 
+}
+
 html{
     /* height: auto; */
     padding: 0px;
@@ -6,12 +11,13 @@ html{
 
 body{
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(24, 24, 24) 500px),
-     linear-gradient(to left, rgba(0, 0, 0, 0.1) 80%, rgb(24, 24, 24) 100%),
-     url(images/portfolio.jpg);
+     linear-gradient(to left, rgba(0, 0, 0, 0.1) 80%, rgb(24, 24, 24) 100%), 
+     url(http://pluralsight2.imgix.net/custom-home/google-africa-aad-2019-hero-image-27ca254c0cc8ded6c3342d2b0a8d7644);
+     /* http://pluralsight2.imgix.net/custom-home/google-africa-aad-2019-hero-image-27ca254c0cc8ded6c3342d2b0a8d7644 */
     background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: bottom;
-    color: #efefef;
+    background-attachment: fixed; 
+    background-position: center;
+    color: var(--secondary-color);
     font-size: 20px;
     margin: 0;
     padding: 0;
